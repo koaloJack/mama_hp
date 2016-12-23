@@ -1,0 +1,265 @@
+figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+figcaption {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 20px;
+}
+
+figcaption {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 20px;
+
+  opacity: 0;
+  bottom: 0;
+  left: -30%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  left: 0;
+}
+
+
+figure img {
+    display: block;
+
+}
+
+figure:hover img {
+
+  -webkit-filter: sepia(60%); /* Chrome, Safari, Opera */
+  filter: sepia(60%);
+
+
+}
+
+#navItems li a{
+  color: white;
+}
+#LogoItem{
+  color: white;
+}
+.nav a{
+  color: white;
+}
+
+#paintings a{
+
+  color: white;
+  padding-left: 650px;
+}
+#photos a{
+  color: white;
+  padding-left: 650px;
+
+}
+#paintings a:hover {
+
+  text-decoration:none;
+
+}
+#photos a:hover{
+
+  text-decoration:none;
+}
+.navbar{
+padding:0px;
+background-color:  #D0403E;
+margin: 0px;
+}
+#navigation {
+color:white;
+background-color:  #D0403E;
+
+}
+
+.footer{
+  background-color:  #D0403E;
+  color: white;
+  text-align: center;
+  height: 50px;
+  padding-top: 20px;
+}
+
+#dropdown_right .dropdown .dropdown-menu {
+  color:white;
+  background-color:  #D0403E;
+}
+
+#dropdown_right .dropdown-menu:hover .dropdown:hover .dropdown:active{
+  color:white;
+  background-color:  #D0403E;
+}
+
+#dropdown_right div{
+  color:white;
+  background-color:  #D0403E;
+}
+
+
+#navigation a{
+color:white;
+font-family: 'Rock Salt';
+
+}
+
+.jumbotron{
+  height: 500px;
+  padding: :0px;
+  margin: 0px;
+  color: white;
+  background-image:url('../background/photo-1460398495418-62c9b5d79fbf.jpg');
+  width:100%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-family: 'Cabin Sketch', cursive;
+
+}
+
+.semi-jumbotron{
+  float:inherit;
+
+    text-align: center;
+background-color: white;
+color: #D0403E;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-top:0px;
+}
+.semi-jumbotron h1{
+  padding-top: 5px;
+  margin-top:0px;
+  font-family: 'Frijole', cursive;
+
+}
+.semi-jumbotron li{
+display: inline;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 50.00%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  height : 300px;
+
+}
+
+
+
+.triangle{
+  width: 0px;
+height: 0px;
+-webkit-transform:rotate(360deg);
+border-style: solid;
+border-width: 250px 0 250px 400px;
+border-color: transparent transparent transparent #35b19b;
+
+}
+
+.btn-h1-spacing{
+  margin-top:18px;
+}
+.form-spacing-top{
+  margin-top:30px;
+}
+.img-responsive{
+  width : 100%;
+  height: 400px;
+
+}
+.post{
+padding-top: 30px;
+margin-top: 30px;
+}
+/*
+
+.post img{
+  border-radius: 60px;
+}
+*/
+#bannerPaint{
+  padding: 0px;
+  margin-left: 0px;
+  background-image: url("https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8a0e79dbae57861876506106675ba8a8");
+  color: white;
+  width:100em; height:600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hTop{
+  padding:0px;
+  margin: 0px;
+  margin-top: 120px;
+  font-family: 'Crafty Girls';
+}
+#hMid{
+  padding:0px;
+  margin: 0px;
+
+  font-family: 'Pacifico';
+}
+.btn-start-tour{
+background-color: #D0403E;
+border-radius: 10px;
+padding-right: 40px;
+padding-left: 40px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+color: white;
+border: 3px #2D925B solid;
+font-size: 20px;
+font-family: 'Rock Salt';
+}
+.btn-start-tour:hover{
+
+
+}
+
+#hBot{
+  padding:0px;
+  margin: 0px;
+  padding-bottom: 100px;
+  margin-bottom: : 40px;
+
+  font-family: 'Give you Glory';
+}
+
+#Enjoy{
+
+  font-family: 'Monoton';
+
+}
+#TourButton{
+padding-top:250px;
+padding-left:300px;
+
+}
+
+#PicSlider{
+  height: 700px;
+  width: 100em;
+}
+#PicSlided{
+  height: 700px;
+  width: 100em;
+}
