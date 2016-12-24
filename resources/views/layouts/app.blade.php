@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Laravel</title>
     <link href="https://fonts.googleapis.com/css?family=Aclonica|Bungee+Inline|Cabin+Sketch|Ceviche+One|Freckle+Face|Frijole|Gochi+Hand|Just+Another+Hand|Marck+Script|Syncopate" rel="stylesheet">
@@ -101,8 +102,8 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
-    <script src="{{ URL::asset('js/dropzone-config.js') }}"></script>
+    <link rel="stylesheet"  type="text/css" href="{{ URL::asset('js/dropzone.js') }}" />
+    <link rel="stylesheet"  type="text/css" href="{{ URL::asset('js/dropzone-config.js') }}" />
 
 </body>
 </html>

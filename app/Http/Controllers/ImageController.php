@@ -59,31 +59,11 @@ class ImageController extends Controller{
           return view('posts.previewPost', array('post'=>$post,'images'=>$images,'y'=>$y_coordinates,'x'=>$x_coordinates));
 
         }
-        public function showSingleImage($id)
-        {
-          //$post=Post::find($id);
-          //$images = $post->photos;
-          //return view('posts.imageUpload')
-          //->with('album',$album);
-          //if(!$images.empty){
-            //$image= $images[0];
-            //else {
-            //  $image= Dummy::find(0);
-            //}
 
-          //}
-
-          //return Response($image);
-        }
 
 
         public function upload(Request $request,$id){
 
-          if ( $request->isXmlHttpRequest() )
-          {
-            $image = $request->file( 'image' );
-            $timestamp = $this->getFormattedTimestamp();
-            $savedImageName = $this->getSavedImageName( $timestamp, $image );
 
 
             if(!empty($image)){
@@ -96,52 +76,7 @@ class ImageController extends Controller{
                    ));
                  //$extension = $file->getClientOriginalExtension();
                Storage::disk('local')->put($savedImageName,$data);
-             }
-
-
-          /*
-
-
-
-                      if ( $imageUploaded )
-                      {
-                          $data = [
-                              'original_path' => asset( '/images/' . $savedImageName )
-                          ];
-                          return json_encode( $data, JSON_UNESCAPED_SLASHES );
-                      }
-                      return "uploading failed";
-                    }
-
-
-          $file=Input::file('file');
-          var_dump(Input::file());
-
-          $post=Post::find($id);
-          //$destinationPath=public_path() . '/uploads/';
-          //$filename = $file->getClientOriginalName();
-
-          //$upload_success = Input::file('file')->move($destinationPath, $filename);
-
-
-           if(!empty($file)){
-             echo "in loop";
-             $filename  = $file->getClientOriginalName();
-             $data=file_get_contents($file);
-             Image::create(array(
-                    'image' => $filename,
-                    'post_id'=> $id
-                  ));
-                //$extension = $file->getClientOriginalExtension();
-              Storage::disk('local')->put($filename,$data);
             }
-
-
-
-
-
-          */
-        //return view('posts.imagePreview')->withAlbum($album);
        }
 
         public function show($filename){
@@ -152,10 +87,6 @@ class ImageController extends Controller{
 
                 //$img=Image::make($file)->resize(200,200);
                 return new Response($file,200);
-
-              }
-
-
         }
         public function totalPreview($id,Request $request){
 
@@ -178,35 +109,8 @@ class ImageController extends Controller{
                    'height'=> $grid['height'],
                    'post_id'=> $id
                  ));
-
-                                                                                                                                                                                                    /*
-
-          //$arr = get_defined_vars();
-          //print_r($arr);
-          //$post->grid=serialize($grid_data);
-          //$type=gettype($grid_data);
-
-          //var_dump($type);
-          //echo "test";
-          var_dump($grid_data['grid']);
-          foreach($grid_data['grid'] as $grid){
-            var_dump($grid);
-
-            Grid::create(array(
-                   'x' => $grid['x'],
-                   'y'=> $grid['y'],
-                   'width'=> $grid['width'],
-                   'height'=> $grid['height'],
-                   'post_id'=> $id
-                  ));
-
           }
 
-
-          $images = $post->photos;
-          $grids  = $post->grids;
-          //var_dump($images);
-*/
           $post=Post::find($id);
 
           $grids  = $post->grids;
@@ -214,5 +118,3 @@ class ImageController extends Controller{
           return view('posts.result', array('post'=>$post,'images'=>$images,'grid'=>$grids));
         }
 
-    //
-}
