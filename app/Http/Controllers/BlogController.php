@@ -16,12 +16,11 @@ class BlogController extends Controller
       return view('blog.preview')->withInput($input);
     }
     public function getSingle($id){
-      //$post=Post::where('id','=',$id)->first();
 
-      //return view('blog.single')->withPost($post);
       $post=Post::find($id);
 
       $grids  = $post->grids;
+      var_dump($grids);
       $images = $post->photos;
       return view('blog.single', array('post'=>$post,'images'=>$images,'grid'=>$grids));
      //return $slug;

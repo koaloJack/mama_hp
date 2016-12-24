@@ -1,6 +1,6 @@
 @extends('layouts.app_grid')
 
-{!! Form::open(['url' => route('blog.single',$post->slug)]) !!}
+{!! Form::open(['url' => route('totalPreview',$post->id)]) !!}
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <input name="grid" id="saved-data" type="hidden" >
 
